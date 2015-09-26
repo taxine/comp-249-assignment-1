@@ -6,9 +6,9 @@
 package paperpublication;
 
 public class PaperPublication {
-    //Attributes with package access rights
-    double price;
-    int numberOfPages;
+    //Attributes with private access rights
+    private double price;
+    private int numberOfPages;
     
     //Constructors
     public PaperPublication() {

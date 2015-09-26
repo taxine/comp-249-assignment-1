@@ -11,8 +11,8 @@ public class Magazine extends PaperPublication {
     public enum PaperQuality {NULL, LOW, NORMAL, HIGH};
     public enum IssuingFrequency {NULL, WEEKLY, MONTHLY, YEARLY};
     //Attributes with package access rights
-    PaperQuality paperQuality;
-    IssuingFrequency issuingFrequency;
+    private PaperQuality paperQuality;
+    private IssuingFrequency issuingFrequency;
     //Constructors
     public Magazine() {
         super();

@@ -56,7 +56,7 @@ public class Book extends PaperPublication {
     
     //Methods
     @Override public String toString() {
-        return ("This book, written by " + this.getAuthorName() + " has " + this.getNumberOfPages() + " pages. It was issued in the year " + issueYear + " and sells for " + this.getPrice() + "$. ISBN: " + isbn);
+        return ("This book, written by " + this.authorName + " has " + this.getNumberOfPages() + " pages. It was issued in the year " + issueYear + " and sells for " + this.getPrice() + "$. ISBN: " + isbn);
     }
     @Override public boolean equals(Object obj) {
         if (!super.equals(obj)) {

@@ -6,8 +6,8 @@
 package booktypes;
 
 public class ChildrenBook extends Book {
-    //Attribute with package access rights
-    int minimumAge;
+    //Attribute with private access rights
+    private int minimumAge;
     //Constructors
     public ChildrenBook() {
         super();
@@ -26,7 +26,7 @@ public class ChildrenBook extends Book {
     }
     //Methods
     @Override public String toString() {
-        return ("This children's book is suitable for ages " + minimumAge + " and up. It was issued in the year " + this.getIssueYear() + " by author " + this.getAuthorName() + ". It is priced at " + this.getPrice() + "$ and comes in at " + this.getNumberOfPages() + " pages. ISBN: " + this.getIsbn());
+        return ("This children's book is suitable for ages " + minimumAge + " and up. It was issued in the year " + this.issueYear + " by author " + this.authorName + ". It is priced at " + this.getPrice() + "$ and comes in at " + this.getNumberOfPages() + " pages. ISBN: " + this.isbn);
     }
     @Override public boolean equals(Object obj) {
         if (!super.equals(obj)) {

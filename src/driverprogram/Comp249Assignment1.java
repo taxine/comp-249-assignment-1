@@ -41,41 +41,22 @@ public class Comp249Assignment1 {
         //Creating PaperPublication instances
         PaperPublication myPaperPublication = new PaperPublication();
         
-        System.out.println("Enter a price for myPaperPublication: ");
-        
-        price = keyboard.nextDouble();
-        while (price < 0) {
-            System.out.println("Price cannot be less than zero. Try again:");
-            price = keyboard.nextDouble();
-        }
-        myPaperPublication.setPrice(price);
-        System.out.println("Set myPaperPublication number of pages: ");
-        
-        numberOfPages = keyboard.nextInt();
-        while (numberOfPages < 0) {
-            System.out.println("Page count cannot be less than zero. Stop being a joker and try again:");
-            numberOfPages = keyboard.nextInt();
-        }
-        myPaperPublication.setNumberOfPages(numberOfPages);
-        
         PaperPublication myParameterizedPaperPublication  = new PaperPublication(14.99, 254);
+        PaperPublication myParameterizedPaperPublication2  = new PaperPublication(14.99, 254);
         System.out.println(myPaperPublication);
         System.out.println(myParameterizedPaperPublication);
+        System.out.println(myParameterizedPaperPublication.equals(myParameterizedPaperPublication2));
+        System.out.println(myParameterizedPaperPublication.equals(myParameterizedPaperPublication));
+        System.out.println(myPaperPublication.equals(myParameterizedPaperPublication));
         
         //Creating Book instances
         Book myBook = new Book();
-        
-        System.out.println("Enter the issue year for your book:");
-        issueYear = keyboard.nextInt();
-        while (issueYear < 0 || issueYear > Calendar.getInstance().get(Calendar.YEAR)) {
-            System.out.println("Book issue year needs to be between 0 and the current year. Please try again: ");
-            issueYear = keyboard.nextInt();
-        }
-        myBook.setIssueYear(issueYear);
-        
         Book myParameterizedBook = new Book(2009, 7342867754835L, "Bob Chanty", 34.99, 784, "My life: Revisited");
         System.out.println(myBook);
         System.out.println(myParameterizedBook);
+        System.out.println(myBook.equals(myParameterizedBook));
+        System.out.println(myBook.equals(myBook));
+        
         
         //Creating Journal instances
         Journal myJournal = new Journal();
@@ -112,11 +93,18 @@ public class Comp249Assignment1 {
                                                      myParameterizedEducationalBook,
                                                      myChildrenBook,
                                                      myParameterizedChildrenBook};
-        System.out.println("Here are the contents of the array:");
+        
+        double smallest = myPaperPublicationArray[0].getPrice();
+        double largest = myPaperPublicationArray[0].getPrice();
         
         for (PaperPublication object : myPaperPublicationArray) {
-        System.out.println(object);
+            if (object.getPrice() > largest) {
+                largest = object.getPrice();
+            } else if (object.getPrice() < smallest) {
+                smallest = object.getPrice();
+            }  
         }
+        System.out.println("Cheapest price in the array is: " + smallest + "$.");
 
     };
     

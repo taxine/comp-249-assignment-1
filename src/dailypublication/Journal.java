@@ -40,4 +40,13 @@ public class Journal extends PaperPublication {
     @Override public String toString() {
         return ("This journal, issue number " + issueNumber + ", is specialized in " + specialityField + ". It clocks in at " + this.getNumberOfPages() + " pages and is priced at " + this.getPrice() + "$.");
     }
+    @Override public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        if (this.issueNumber != ((Journal)obj).issueNumber || this.specialityField.equals(((Journal)obj).specialityField)) {
+            return false;
+        }
+        return true;
+    }
 }

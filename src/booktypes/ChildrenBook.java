@@ -28,5 +28,14 @@ public class ChildrenBook extends Book {
     @Override public String toString() {
         return ("This children's book is suitable for ages " + minimumAge + " and up. It was issued in the year " + this.getIssueYear() + " by author " + this.getAuthorName() + ". It is priced at " + this.getPrice() + "$ and comes in at " + this.getNumberOfPages() + " pages. ISBN: " + this.getIsbn());
     }
+    @Override public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        if (this.minimumAge != ((ChildrenBook)obj).minimumAge) {
+            return false;
+        }
+        return true;
+    }
     
 }

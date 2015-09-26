@@ -38,7 +38,15 @@ public class EducationalBook extends Book {
     @Override public String toString() {
         return ("This educational book (Edition Number: " + this.getEditionNumber() + ") belongs to the speciality field \"" + specialityField + "\". It was issued in the year " + issueYear + " and written by " + this.getAuthorName() + ". It has " + this.getNumberOfPages() + " pages and is priced at " + this.getPrice() + "$. ISBN: " + isbn);
     }
-    
+    @Override public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
+        if (this.editionNumber != ((EducationalBook)obj).editionNumber || this.specialityField.equals(((EducationalBook)obj).specialityField)) {
+            return false;
+        }
+        return true;
+    }
     
     
     

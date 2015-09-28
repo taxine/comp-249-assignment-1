@@ -62,7 +62,7 @@ public class Book extends PaperPublication {
         if (!super.equals(obj)) {
             return false;
         }
-        if (this.isbn != ((Book)obj).isbn || this.issueYear != ((Book)obj).issueYear || !this.authorName.equals(((Book)obj).authorName) || !this.title.equals(((Book)obj).title)) {
+        if (this.isbn != ((Book)obj).isbn && this.issueYear != ((Book)obj).issueYear && !this.authorName.equals(((Book)obj).authorName) && !this.title.equals(((Book)obj).title)) {
             return false;
         }
         return true;

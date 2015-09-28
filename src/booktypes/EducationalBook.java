@@ -6,7 +6,7 @@
 package booktypes;
 
 public class EducationalBook extends Book {
-    //Attributes with package access rights
+    //Attributes with private access rights
     private int editionNumber;
     private String specialityField;
     
@@ -42,7 +42,7 @@ public class EducationalBook extends Book {
         if (!super.equals(obj)) {
             return false;
         }
-        if (this.editionNumber != ((EducationalBook)obj).editionNumber || this.specialityField.equals(((EducationalBook)obj).specialityField)) {
+        if (this.editionNumber != ((EducationalBook)obj).editionNumber && this.specialityField.equals(((EducationalBook)obj).specialityField)) {
             return false;
         }
         return true;

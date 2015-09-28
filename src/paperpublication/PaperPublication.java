@@ -39,13 +39,10 @@ public class PaperPublication {
         return ("This paper publication has " + numberOfPages + " pages and is priced at " + price + "$.");
     }
     @Override public boolean equals(Object obj) {
-        if (obj == null) {
+        if (obj == null || this == null || this.getClass() != obj.getClass()) {
             return false;
         }
-        if (this.getClass() != obj.getClass()) {
-            return false;
-        }
-        if (this.price != ((PaperPublication)obj).price || this.numberOfPages != ((PaperPublication)obj).numberOfPages) {
+        if (this.price != ((PaperPublication)obj).price && this.numberOfPages != ((PaperPublication)obj).numberOfPages) {
             return false;
         }
         return true;

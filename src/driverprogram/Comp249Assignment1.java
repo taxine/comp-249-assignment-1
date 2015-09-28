@@ -67,6 +67,8 @@ public class Comp249Assignment1 {
         ChildrenBook myParameterizedChildrenBook = new ChildrenBook(3, 4768825466586L, 1987, "Buck Joe", 21.68, 32, "The purple tree");
         System.out.println(myChildrenBook);
         System.out.println(myParameterizedChildrenBook);
+        //Testing equals() method with instance from different class. Should return false
+        System.out.println(myMagazine.equals(myBook));
         
         //Create an array and fill it with various objects
         PaperPublication[] myPaperPublicationArray = 
@@ -93,7 +95,7 @@ public class Comp249Assignment1 {
             }  
         }
         //Print cheapest price
-        System.out.println("Cheapest price in the array is: " + smallest + "$.");
+        System.out.printf("Cheapest price in the array is: $ %.2f\n", smallest );
 
     };
     

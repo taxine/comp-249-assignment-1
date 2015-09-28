@@ -45,7 +45,7 @@ public class Magazine extends PaperPublication {
         if (!super.equals(obj)) {
             return false;
         }
-        if (this.paperQuality != ((Magazine)obj).paperQuality || this.issuingFrequency != ((Magazine)obj).issuingFrequency) {
+        if (this.paperQuality != ((Magazine)obj).paperQuality && this.issuingFrequency != ((Magazine)obj).issuingFrequency) {
             return false;
         }
         return true;

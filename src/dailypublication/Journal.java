@@ -44,7 +44,7 @@ public class Journal extends PaperPublication {
         if (!super.equals(obj)) {
             return false;
         }
-        if (this.issueNumber != ((Journal)obj).issueNumber || this.specialityField.equals(((Journal)obj).specialityField)) {
+        if (this.issueNumber != ((Journal)obj).issueNumber && this.specialityField.equals(((Journal)obj).specialityField)) {
             return false;
         }
         return true;

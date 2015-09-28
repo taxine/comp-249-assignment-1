@@ -32,10 +32,7 @@ public class ChildrenBook extends Book {
         if (!super.equals(obj)) {
             return false;
         }
-        if (this.minimumAge != ((ChildrenBook)obj).minimumAge) {
-            return false;
-        }
-        return true;
+        return (this.minimumAge == ((ChildrenBook)obj).minimumAge);
     }
     
 }

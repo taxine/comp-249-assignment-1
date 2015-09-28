@@ -42,10 +42,7 @@ public class EducationalBook extends Book {
         if (!super.equals(obj)) {
             return false;
         }
-        if (this.editionNumber != ((EducationalBook)obj).editionNumber && this.specialityField.equals(((EducationalBook)obj).specialityField)) {
-            return false;
-        }
-        return true;
+        return (this.editionNumber == ((EducationalBook)obj).editionNumber && this.specialityField.equals(((EducationalBook)obj).specialityField));
     }
     
     

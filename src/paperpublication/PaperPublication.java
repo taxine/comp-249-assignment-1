@@ -42,6 +42,6 @@ public class PaperPublication {
         if (obj == null || this == null || this.getClass() != obj.getClass()) {
             return false;
         }
-        return (this.price != ((PaperPublication)obj).price && this.numberOfPages != ((PaperPublication)obj).numberOfPages);
+        return (this.price == ((PaperPublication)obj).price && this.numberOfPages == ((PaperPublication)obj).numberOfPages);
     }
 }

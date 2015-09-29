@@ -41,7 +41,7 @@ public class Comp249Assignment1 {
         myBook.setPrice(45.88);
         myBook.setTitle("Flying");
         System.out.println(myBook);
-        System.out.println(myBook.equals(myBook));
+        System.out.println(myBook.equals(myPaperPublication));
         
         
         //Creating Journal instances

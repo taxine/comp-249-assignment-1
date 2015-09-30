@@ -43,5 +43,6 @@ public class PaperPublication {
             return false;
         }
         return (this.price == ((PaperPublication)obj).price && this.numberOfPages == ((PaperPublication)obj).numberOfPages);
+
     }
 }

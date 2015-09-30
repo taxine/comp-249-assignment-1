@@ -4,9 +4,9 @@
 //Written by: Louis-Olivier Guérin, 23054691
 //
 //DESCRIPTION:
-//This program creates objects from various classes. Descriptions of each object are printed to the console.
-//Objects are then placed in an array. A sorting algorithm is then performed on the array to sort the ojects by price,
-//from lowest to highest.
+//This program creates objects from various classes. Descriptions of each object are printed to the console. Overrided equals() method is tested
+//on numerous objects from varying classes.
+//Objects are then placed in an array. Price of cheapest object in the array is then printed to the console
 //
 //---------------------------------------------
 package driverprogram;
@@ -28,8 +28,11 @@ public class Comp249Assignment1 {
         PaperPublication myParameterizedPaperPublication2  = new PaperPublication(14.99, 254);
         System.out.println(myPaperPublication);
         System.out.println(myParameterizedPaperPublication);
+        System.out.println("Print true if myParameterizedPaperPublication is equal to myParameterizedPaperPublication2, false if otherwise:");
         System.out.println(myParameterizedPaperPublication.equals(myParameterizedPaperPublication2));
+        System.out.println("Print true if myParameterizedPaperPublication is equal to myParameterizedPaperPublication, false if otherwise:");
         System.out.println(myParameterizedPaperPublication.equals(myParameterizedPaperPublication));
+        System.out.println("Print true if myPaperPublication is equal to myParameterizedPaperPublication, false if otherwise:");
         System.out.println(myPaperPublication.equals(myParameterizedPaperPublication));
         
         //Creating Book instances
@@ -40,8 +43,9 @@ public class Comp249Assignment1 {
         myBook.setIssueYear(2001);
         myBook.setNumberOfPages(345);
         myBook.setPrice(45.88);
-        myBook.setTitle("Flying");
+        myBook.setTitle("Flying 101");
         System.out.println(myBook);
+        System.out.println("Print true if myBook is equal to myPaperPublication, false if otherwise:");
         System.out.println(myBook.equals(myPaperPublication));
         
         
@@ -69,6 +73,7 @@ public class Comp249Assignment1 {
         System.out.println(myChildrenBook);
         System.out.println(myParameterizedChildrenBook);
         //Testing equals() method with instance from different class. Should return false
+        System.out.println("Print true if myMagazine is equal to myBook, false if otherwise:");
         System.out.println(myMagazine.equals(myBook));
         
         //Create an array and fill it with various objects

@@ -34,6 +34,7 @@ public class Comp249Assignment1 {
         
         //Creating Book instances
         Book myBook = new Book();
+        System.out.println(myBook);
         myBook.setAuthorName("John Davis");
         myBook.setIsbn(385939696);
         myBook.setIssueYear(2001);

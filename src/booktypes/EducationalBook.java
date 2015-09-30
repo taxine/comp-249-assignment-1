@@ -13,8 +13,6 @@ public class EducationalBook extends Book {
     //Constructors
     public EducationalBook() {
         super();
-//        this.editionNumber = 0;
-//        this.specialityField = "absolutely nothing";
     }
     public EducationalBook(int editionNumber, String specialityField, String title, long isbn, int issueYear, String authorName, double price, int numberOfPages) {
         super(issueYear, isbn, authorName, price, numberOfPages, title);

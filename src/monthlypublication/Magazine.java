@@ -16,8 +16,6 @@ public class Magazine extends PaperPublication {
     //Constructors
     public Magazine() {
         super();
-//        this.paperQuality = PaperQuality.NULL;
-//        this.issuingFrequency = IssuingFrequency.NULL;
     }
     public Magazine(PaperQuality paperQuality, IssuingFrequency issuingFrequency, double price, int numberOfPages) {
         super(price, numberOfPages);

@@ -11,7 +11,6 @@ public class ChildrenBook extends Book {
     //Constructors
     public ChildrenBook() {
         super();
-//        this.minimumAge = 0;
     }
     public ChildrenBook(int minimumAge, long isbn, int issueYear, String authorName, double price, int numberOfPages, String title) {
         super(issueYear, isbn, authorName, price, numberOfPages, title);

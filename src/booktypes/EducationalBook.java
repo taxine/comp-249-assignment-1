@@ -14,7 +14,7 @@ public class EducationalBook extends Book {
     public EducationalBook() {
         super();
         this.editionNumber = 0;
-        this.specialityField = "absolutely nothing";
+        this.specialityField = "No speciality field";
     }
     public EducationalBook(int editionNumber, String specialityField, String title, long isbn, int issueYear, String authorName, double price, int numberOfPages) {
         super(issueYear, isbn, authorName, price, numberOfPages, title);
@@ -42,10 +42,7 @@ public class EducationalBook extends Book {
         if (!super.equals(obj)) {
             return false;
         }
-        if (this.editionNumber != ((EducationalBook)obj).editionNumber && this.specialityField.equals(((EducationalBook)obj).specialityField)) {
-            return false;
-        }
-        return true;
+        return (this.editionNumber == ((EducationalBook)obj).editionNumber && this.specialityField.equals(((EducationalBook)obj).specialityField));
     }
     
     

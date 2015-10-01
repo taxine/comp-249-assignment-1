@@ -16,10 +16,10 @@ public class Book extends PaperPublication {
     //Constructors
     public Book() {
         super();
-        this.isbn = 0L;
+        this.isbn = 0;
         this.issueYear = 0;
-        this.authorName = "John Doe";
-        this.title = "";
+        this.authorName = "No author name";
+        this.title = "No title";
     }
     public Book(int issueYear, long isbn, String authorName, double price, int numberOfPages, String title) {
         super(price, numberOfPages);
@@ -62,9 +62,7 @@ public class Book extends PaperPublication {
         if (!super.equals(obj)) {
             return false;
         }
-        if (this.isbn != ((Book)obj).isbn && this.issueYear != ((Book)obj).issueYear && !this.authorName.equals(((Book)obj).authorName) && !this.title.equals(((Book)obj).title)) {
-            return false;
-        }
-        return true;
+        return (this.isbn == ((Book)obj).isbn && this.issueYear == ((Book)obj).issueYear && this.authorName.equals(((Book)obj).authorName) && this.title.equals(((Book)obj).title));
+
     }
 }

@@ -13,11 +13,11 @@ public class PaperPublication {
     //Constructors
     public PaperPublication() {
         System.out.println("Creating object of " + this.getClass());
-        this.price = 0.00;
+        this.price = 0.0;
         this.numberOfPages = 0;
     }
     public PaperPublication(double price, int numberOfPages) {
-        System.out.println("Creating object of  " + this.getClass());
+        System.out.println("Creating object of " + this.getClass());
         this.price = price;
         this.numberOfPages = numberOfPages;
     }
@@ -42,7 +42,7 @@ public class PaperPublication {
         if (obj == null || this == null || this.getClass() != obj.getClass()) {
             return false;
         }
-        return (this.price == ((PaperPublication)obj).price && this.numberOfPages == ((PaperPublication)obj).numberOfPages); 
-        
+        return (this.price == ((PaperPublication)obj).price && this.numberOfPages == ((PaperPublication)obj).numberOfPages);
+
     }
 }

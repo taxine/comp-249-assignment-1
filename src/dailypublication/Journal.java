@@ -16,7 +16,7 @@ public class Journal extends PaperPublication {
     public Journal() {
         super();
         this.issueNumber = 0;
-        this.specialityField = "absolutely nothing";
+        this.specialityField = "No speciality field";
     }
     public Journal(int issueNumber, String specialityField, double price, int numberOfPages) {
         super(price, numberOfPages);
@@ -44,9 +44,6 @@ public class Journal extends PaperPublication {
         if (!super.equals(obj)) {
             return false;
         }
-        if (this.issueNumber != ((Journal)obj).issueNumber && this.specialityField.equals(((Journal)obj).specialityField)) {
-            return false;
-        }
-        return true;
+        return (this.issueNumber == ((Journal)obj).issueNumber && this.specialityField.equals(((Journal)obj).specialityField));
     }
 }

@@ -95,8 +95,5 @@ public class Comp249Assignment1 {
         //Print cheapest price
         System.out.printf("Cheapest price in the array is: $ %.2f\n", smallest );
 
-    };
-    
-    
-    
+    }; 
 }

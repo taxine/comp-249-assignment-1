@@ -25,7 +25,7 @@ public class Comp249Assignment1 {
         //Creating PaperPublication instances
         PaperPublication myPaperPublication = new PaperPublication();
         PaperPublication myParameterizedPaperPublication  = new PaperPublication(14.99, 254);
-        PaperPublication myParameterizedPaperPublication2  = new PaperPublication(14.99, 254);
+        PaperPublication myParameterizedPaperPublication2  = new PaperPublication(14.98, 254);
         //Testing equality of objects
         System.out.println(myParameterizedPaperPublication.equals(myParameterizedPaperPublication2));
         System.out.println(myParameterizedPaperPublication.equals(myParameterizedPaperPublication));

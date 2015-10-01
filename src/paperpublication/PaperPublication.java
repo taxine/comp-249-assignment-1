@@ -15,7 +15,7 @@ public class PaperPublication {
         System.out.println("Creating object of " + this.getClass());
     }
     public PaperPublication(double price, int numberOfPages) {
-        System.out.println("Creating object of  " + this.getClass());
+        System.out.println("Creating object of " + this.getClass());
         this.price = price;
         this.numberOfPages = numberOfPages;
     }

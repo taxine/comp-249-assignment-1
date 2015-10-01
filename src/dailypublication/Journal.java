@@ -15,6 +15,8 @@ public class Journal extends PaperPublication {
   
     public Journal() {
         super();
+        this.issueNumber = 0;
+        this.specialityField = "No speciality field";
     }
     public Journal(int issueNumber, String specialityField, double price, int numberOfPages) {
         super(price, numberOfPages);

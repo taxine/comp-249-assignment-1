@@ -8,14 +8,16 @@ import paperpublication.PaperPublication;
 
 public class Magazine extends PaperPublication {
     //Enumeration types
-    public enum PaperQuality {LOW, NORMAL, HIGH};
-    public enum IssuingFrequency {WEEKLY, MONTHLY, YEARLY};
+    public enum PaperQuality {NULL, LOW, NORMAL, HIGH};
+    public enum IssuingFrequency {NULL, WEEKLY, MONTHLY, YEARLY};
     //Attributes with package access rights
     private PaperQuality paperQuality;
     private IssuingFrequency issuingFrequency;
     //Constructors
     public Magazine() {
         super();
+        this.paperQuality = PaperQuality.NULL;
+        this.issuingFrequency = IssuingFrequency.NULL;
     }
     public Magazine(PaperQuality paperQuality, IssuingFrequency issuingFrequency, double price, int numberOfPages) {
         super(price, numberOfPages);

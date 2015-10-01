@@ -16,6 +16,10 @@ public class Book extends PaperPublication {
     //Constructors
     public Book() {
         super();
+        this.isbn = 0;
+        this.issueYear = 0;
+        this.authorName = "No author name";
+        this.title = "No title";
     }
     public Book(int issueYear, long isbn, String authorName, double price, int numberOfPages, String title) {
         super(price, numberOfPages);

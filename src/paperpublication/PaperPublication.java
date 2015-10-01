@@ -13,6 +13,8 @@ public class PaperPublication {
     //Constructors
     public PaperPublication() {
         System.out.println("Creating object of " + this.getClass());
+        this.price = 0.0;
+        this.numberOfPages = 0;
     }
     public PaperPublication(double price, int numberOfPages) {
         System.out.println("Creating object of " + this.getClass());

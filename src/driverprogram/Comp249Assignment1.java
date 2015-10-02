@@ -78,22 +78,23 @@ public class Comp249Assignment1 {
                                                      myChildrenBook,
                                                      myParameterizedChildrenBook};
         
-        double smallest = myPaperPublicationArray[0].getPrice();
-        double largest = myPaperPublicationArray[0].getPrice();
-        
-        //Trace the PaperPublication array to find the cheapest pricest
-        for (PaperPublication object : myPaperPublicationArray) {
-            //Print Object's toString() method
-            System.out.println(object);
-            //Find cheapest price in array
-            if (object.getPrice() > largest) {
-                largest = object.getPrice();
-            } else if (object.getPrice() < smallest) {
-                smallest = object.getPrice();
+        PaperPublication smallest = myPaperPublicationArray[0];
+        PaperPublication largest = myPaperPublicationArray[0];
+        int smallestindex = 0;
+        //Trace the PaperPublication array to find the cheapest price
+        for (int i=0;i<myPaperPublicationArray.length;i++) {
+            if (myPaperPublicationArray[i].getPrice() > largest.getPrice()) {
+                largest = myPaperPublicationArray[i];
+            } else if (myPaperPublicationArray[i].getPrice() < smallest.getPrice()) {
+                smallest = myPaperPublicationArray[i];
+                smallestindex = i;
             }  
         }
         //Print cheapest price
-        System.out.printf("Cheapest price in the array is: $ %.2f\n", smallest );
-
+        //System.out.println("Cheapest item in the array is: " +smallest+ ". It is found at index " +smallestindex);
+        for (int i=0;i<myPaperPublicationArray.length;i++){ 
+            if (myPaperPublicationArray[i].getPrice() == smallest.getPrice())
+              System.out.println("Cheapest item in the array is: " +myPaperPublicationArray[i]+ ". It is found at index " +i);  
+        }
     }; 
 }

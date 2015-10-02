@@ -63,8 +63,9 @@ public class Book extends PaperPublication {
             return false;
         }
         return (this.isbn == ((Book)obj).isbn && this.issueYear == ((Book)obj).issueYear && this.authorName.equals(((Book)obj).authorName) && this.title.equals(((Book)obj).title));
-
-    }
-}
 //test test test test
 //testing test test test
+        // more test test test
+        
+    }
+}

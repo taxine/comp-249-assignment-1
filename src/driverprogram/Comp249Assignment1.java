@@ -91,7 +91,10 @@ public class Comp249Assignment1 {
             }  
         }
         //Print cheapest price
-        System.out.printf("Cheapest item in the array is:" +smallest+ ". It is found at index " +smallestindex);
-
+        //System.out.println("Cheapest item in the array is: " +smallest+ ". It is found at index " +smallestindex);
+        for (int i=0;i<myPaperPublicationArray.length;i++){ 
+            if (myPaperPublicationArray[i].getPrice() == smallest.getPrice())
+              System.out.println("Cheapest item in the array is: " +myPaperPublicationArray[i]+ ". It is found at index " +i);  
+        }
     }; 
 }
